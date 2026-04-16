@@ -53,5 +53,29 @@ class GameTest {
 	
 	}
 	
+	@Test
+	void test_spare() {
+		
+		
+		
+		for (int i =  0 ; i < 7 ; i++) {
+			game.roll(1);
+		}
+		
+		for (int i =  0 ; i < 3 ; i++) {
+			game.roll(1);
+		}
+		
+		for (int i =  0 ; i < 4 ; i++) {
+			game.roll(2);
+		}
+		for (int i =  0 ; i < 17 ; i++) {
+			game.roll(0);
+		}
+		assertEquals(18,game.score());
+	
+	
+	}
+	
        
 }
