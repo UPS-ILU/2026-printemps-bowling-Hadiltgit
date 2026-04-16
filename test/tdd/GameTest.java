@@ -74,7 +74,32 @@ class GameTest {
 		}
 		assertEquals(18,game.score());
 	
+
+	}
 	
+	
+	@Test
+	void test_strike() {
+		
+		
+		
+		for (int i =  0 ; i < 10 ; i++) {
+			game.roll(1);
+		}
+		
+		for (int i =  0 ; i < 4 ; i++) {
+			game.roll(2);
+		}
+		
+		for (int i =  0 ; i < 3 ; i++) {
+			game.roll(2);
+		}
+		for (int i =  0 ; i < 16 ; i++) {
+			game.roll(0);
+		}
+		assertEquals(24,game.score());
+	
+
 	}
 	
        
